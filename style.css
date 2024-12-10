@@ -158,6 +158,9 @@ input::placeholder {
     backdrop-filter: blur(10px);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-avatar {
@@ -562,7 +565,7 @@ input::placeholder {
     }
 }
 
-/* 个人简介和专业技能新布局样式 */
+/* 个人简介和专业技��新布局样式 */
 .intro-section {
     padding: 4rem 2rem;
     background: linear-gradient(to bottom, #1E1E1E, #252830);
@@ -663,6 +666,9 @@ input::placeholder {
 /* 个人信息和教育背景样式优化 */
 .profile-details {
     margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    align-self: flex-start;
 }
 
 .profile-details h2 {
@@ -671,12 +677,14 @@ input::placeholder {
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
 }
 
 .profile-details ul {
     list-style: none;
     padding: 0;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 .profile-details ul:last-child {
@@ -691,10 +699,6 @@ input::placeholder {
     align-items: center;
 }
 
-.profile-details li:last-child {
-    margin-bottom: 0;
-}
-
 .profile-details strong {
     color: #88ccff;
     margin-right: 1rem;
@@ -702,16 +706,10 @@ input::placeholder {
     display: inline-block;
 }
 
-/* 响应式调整 */
+/* 移除网格布局，改用垂直排列 */
 @media (min-width: 768px) {
     .profile-details {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .profile-details ul {
-        margin-bottom: 0;
+        display: block;
     }
 }
 
@@ -769,7 +767,7 @@ input::placeholder {
     color: var(--text-secondary);
 }
 
-/* 移动端优化 */
+/* 动端优化 */
 @media (max-width: 768px) {
     /* 调整整体padding */
     .profile-page {
