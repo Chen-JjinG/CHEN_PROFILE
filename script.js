@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 优化后的打字动画效果
     function typeText() {
         passwordInput.value = '';
-        const text = 'CHENJ';
+        const text = 'J_jChen';
         let index = 0;
         
         // 添加闪烁的光标效果
