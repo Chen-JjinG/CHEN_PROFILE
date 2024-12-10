@@ -57,11 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 开始按钮点击事件
     startBtn.addEventListener('click', () => {
         const password = passwordInput.value;
-        
-        if (password !== 'CHENJ') {
-            alert('请输入正确的名称');
-            return;
-        }
 
         loginPage.style.display = 'none';
         profilePage.classList.remove('hidden');
