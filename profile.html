@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 登录页面 -->
+    <div class="login-page" id="loginPage">
+        <div class="login-container">
+            <div class="login-form">
+                <h1 class="login-title">陈家靖个人简介</h1>
+                <h2 class="sign-in">开始了解</h2>
+                <input type="text" placeholder="名称" id="passwordInput" value="" readonly>
+                <button class="start-btn" id="startBtn">
+                    <span class="arrow-icon">→</span>
+                </button>
+            </div>
+        </div>
+        <div class="company-info">
+            J_jchen_1790993370@qq.com
+        </div>
+    </div>
+
+    <!-- 个人简历内容 -->
+    <div class="profile-page hidden" id="profilePage">
+        <!-- 个人介绍部分 -->
+        <header class="profile-header">
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="source/img/avatar.jpg" alt="个人头像">
+                </div>
+                <div class="profile-text">
+                    <h1 class="profile-name">陈家靖</h1>
+                    <p class="profile-id">J_jchen</p>
+                </div>
+                <div class="profile-description">
+                    <h2>个人简介</h2>
+                    <p class="intro">我先后在两家中小企业中担任C#工程师一职，熟练使用C#，SQLSERVER，MySQL，HTML等技术。对系统架构以及多种设计模式有一定的了解。目前在寻找程序员身份未来的出路。</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 项目展示部分 -->
+        <div class="projects-container">
+            <h2 class="section-title">项目经历</h2>            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="slider">
+                            <div class="slider-container">
+                                <img src="source/img/vr_01.png" alt="项目图片1">
+                                <img src="source/img/vr_02.png" alt="项目图片2">
+                            </div>
+                            <div class="slider-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="slider-btn prev">❮</button>
+                            <button class="slider-btn next">❯</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2 class="project-title">基于Miediapipe的虚拟人直播平台</h2>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Three.js</span>
+                        </div>
+                        <p class="project-description">
+                            这是一个基于Miediapipe的虚拟人直播平台，客户可以上传用于动补的模型到平台上，通过网络摄像头捕捉动作，并绑定到模型上。提供了比较精确的面补以及动作捕捉。我在这个项目中负责需求分析，文档撰写以及全部的项目开发推进。该项目作为毕业设计获得院系优秀毕设三等奖。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="slider">
+                            <div class="slider-container">
+                                <img src="source/img/lanhu_01.png" alt="项目图片1">
+                                <img src="source/img/lanhu_02.png" alt="项目图片2">
+                            </div>
+                            <div class="slider-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="slider-btn prev">❮</button>
+                            <button class="slider-btn next">❯</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2 class="project-title">深圳睿建智能建筑图纸深化设计</h2>
+                        <div class="project-tags">
+                            <span class="tag">C# .NET Core</span>
+                            <span class="tag">RabbitMQ</span>
+                            <span class="tag">WPF</span>
+                        </div>
+                        <p class="project-description">
+                            这是一个建筑图纸深化设计系统，主要功能是根据建筑图纸进行深化设计，生成施工图纸。同时它提供项目管理，图纸管理，3D模型预览等功能。我在当中负责WPF前端开发以及部分设计工作。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="slider">
+                            <div class="slider-container">
+                                <img src="source/img/kb_01.png" alt="项目图片1">
+                                <img src="source/img/kb_02.png" alt="项目图片1">
+                                <img src="source/img/kb_03.png" alt="项目图片2">
+                            </div>
+                            <div class="slider-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="slider-btn prev">❮</button>
+                            <button class="slider-btn next">❯</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2 class="project-title">金博K9ERP系统</h2>
+                        <div class="project-tags">
+                            <span class="tag">C# .NET Framework 4.0</span>
+                            <span class="tag">SQLSERVER</span>
+                            <span class="tag">WinForm</span>
+                            <span class="tag">FastReport</span>
+                        </div>
+                        <p class="project-description">
+                            这是一个提供给医药企业使用的ERP系统，它提供了符合当前药监规范的ERP系统，包括生产，销售，采购，库存，财务，质量，物流，报表等功能。我在当中主要负责系统与第三方的接口对接内容，以及部分POS系统和内部CRM系统的开发。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="slider">
+                            <div class="slider-container">
+                                <img src="source/img/art_01.png" alt="项目图片1">
+                                <img src="source/img/art_02.png" alt="项目图片2">
+                                <img src="source/img/art_03.jpg" alt="项目图片3">
+                                <img src="source/img/art_04.png" alt="项目图片4">
+                            </div>
+                            <div class="slider-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="slider-btn prev">❮</button>
+                            <button class="slider-btn next">❯</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2 class="project-title">模仿血液流动的声感跑马灯</h2>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">Arduino UNO R3</span>
+                        </div>
+                        <p class="project-description">
+                            这个是和广美同学合作的一个项目，它模仿血液流动的声感跑马灯，并且通过声音来控制灯带的流动。他负责狮子头雕塑部分，我负责硬件灯带部分。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 在 body 标签结束前添加图片预览层 -->
+    <div class="image-preview-overlay hidden" id="imagePreview">
+        <div class="image-preview-container">
+            <img src="" alt="预览图" id="previewImage">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
