@@ -253,16 +253,17 @@ input::placeholder {
 }
 
 .project-card {
-    background-color: #252830;
-    border-radius: 16px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .project-image {
@@ -283,35 +284,53 @@ input::placeholder {
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .project-title {
+    color: var(--text-primary);
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #fff;
+}
+
+.project-role {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-tags {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
     flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
 }
 
 .tag {
-    background-color: rgba(0, 122, 255, 0.2);
-    color: #007AFF;
-    padding: 0.25rem 0.75rem;
+    background-color: rgba(0, 122, 255, 0.1);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
+    backdrop-filter: blur(4px);
 }
 
 .project-description {
-    color: #ccc;
+    list-style: disc;
+    padding: 0 0 0 1.5rem;
+    margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.project-description li {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.project-description li:last-child {
+    margin-bottom: 0;
 }
 
 .project-features {
@@ -540,6 +559,316 @@ input::placeholder {
     }
     to {
         background-position: 200px 200px;
+    }
+}
+
+/* 个人简介和专业技能新布局样式 */
+.intro-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #1E1E1E, #252830);
+}
+
+.intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.intro-card {
+    background: rgba(37, 40, 48, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.intro-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+    color: #007AFF;
+}
+
+.intro-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.intro-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #007AFF;
+    border-radius: 2px;
+}
+
+.intro-text {
+    color: #e0e0e0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    color: #e0e0e0;
+    margin-bottom: 1.2rem;
+    padding-left: 1.8rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.skills-list li::before {
+    content: "→";
+    color: #007AFF;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .intro-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-card {
+        padding: 2rem;
+    }
+}
+
+/* 个人信息和教育背景样式优化 */
+.profile-details {
+    margin-top: 2rem;
+}
+
+.profile-details h2 {
+    font-size: 1.4rem;
+    color: #007AFF;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-details ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.profile-details ul:last-child {
+    margin-bottom: 0;
+}
+
+.profile-details li {
+    color: #e0e0e0;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.profile-details li:last-child {
+    margin-bottom: 0;
+}
+
+.profile-details strong {
+    color: #88ccff;
+    margin-right: 1rem;
+    min-width: 60px;
+    display: inline-block;
+}
+
+/* 响应式调整 */
+@media (min-width: 768px) {
+    .profile-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .profile-details ul {
+        margin-bottom: 0;
+    }
+}
+
+/* 统一颜色变量 */
+:root {
+    --bg-primary: #1E1E1E;
+    --bg-secondary: #252830;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #88ccff;
+    --accent-color: #007AFF;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(37, 40, 48, 0.8);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 更新项目卡片样式 */
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-title {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.project-role {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background-color: rgba(0, 122, 255, 0.1);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(4px);
+}
+
+.project-description li {
+    color: var(--text-secondary);
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    /* 调整整体padding */
+    .profile-page {
+        padding: 1rem;
+    }
+
+    /* 头部调整 */
+    .profile-header {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-info {
+        padding: 1.5rem;
+    }
+
+    .profile-name {
+        font-size: 1.8rem;
+    }
+
+    /* 个人简介和技能部分 */
+    .intro-section {
+        padding: 2rem 1rem;
+    }
+
+    .intro-card {
+        padding: 1.5rem;
+    }
+
+    .intro-title {
+        font-size: 1.5rem;
+    }
+
+    /* 项目展示部分 */
+    .projects-container {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-grid {
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .project-tags {
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    /* 图片轮播调整 */
+    .project-image {
+        height: 180px;
+    }
+
+    .slider-btn {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .slider-dots {
+        bottom: 8px;
+    }
+}
+
+/* 小屏幕设备额外优化 */
+@media (max-width: 480px) {
+    .profile-info {
+        padding: 1rem;
+    }
+
+    .project-content {
+        padding: 1.2rem;
+    }
+
+    .project-image {
+        height: 160px;
+    }
+
+    .tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
     }
 }
  

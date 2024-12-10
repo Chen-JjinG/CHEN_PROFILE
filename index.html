@@ -34,14 +34,54 @@
                 </div>
                 <div class="profile-text">
                     <h1 class="profile-name">陈家靖</h1>
-                    <p class="profile-id">J_jchen</p>
                 </div>
-                <div class="profile-description">
-                    <h2>个人简介</h2>
-                    <p class="intro">我先后在两家中小企业中担任C#工程师一职，熟练使用C#，SQLSERVER，MySQL，HTML等技术。对系统架构以及多种设计模式有一定的了解。目前在寻找程序员身份未来的出路。</p>
+
+                <!-- 添加联系方式和教育背景 -->
+                <div class="profile-details">
+                    <h2>个人信息</h2>
+                    <ul>
+                        <li><strong>电话：</strong>18244934428</li>
+                        <li><strong>邮箱：</strong>1790993370@qq.com</li>
+                    </ul>
+                    
+                    <h2>教育背景</h2>
+                    <ul>
+                        <li>本科 信息管理与信息系统</li>
+                    </ul>
                 </div>
             </div>
         </header>
+
+        <!-- 在 profile-header 后面，projects-container 前面添加 -->
+        <div class="intro-section">
+            <div class="intro-container">
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h2 class="intro-title">个人简介</h2>
+                    <p class="intro-text">拥有2年软件开发经验，熟悉完整的软件开发生命周期，具备扎实的技术背景和系统架构设计能力。在多个项目中担任需求分析和功能设计工作，善于与开发团队和客户进行有效沟通。熟练使用Draw.io、蓝湖等产品设计工具，对业务系统的需求分析、流程优化有丰富经验。</p>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h2 class="intro-title">专业技能</h2>
+                    <ul class="skills-list">
+                        <li>熟练使用Draw.io、蓝湖等产品设计工具进行原型设计和流程图绘制</li>
+                        <li>具备优秀的需求分析能力和文档撰写能力，善于输出PRD、流程图等产品文档</li>
+                        <li>扎实的技术背景（C#、SQL、前端开发），便于与开发团队进行高效沟通</li>
+                        <li>具备良好的项目管理能力，能把控项目进度和质量</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- 项目展示部分 -->
         <div class="projects-container">
@@ -63,15 +103,19 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h2 class="project-title">基于Miediapipe的虚拟人直播平台</h2>
+                        <h2 class="project-title">基于Mediapipe的虚拟人直播平台（毕业设计）</h2>
+                        <p class="project-role"><strong>角色：</strong>项目负责人</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">TypeScript</span>
                             <span class="tag">Three.js</span>
                         </div>
-                        <p class="project-description">
-                            这是一个基于Miediapipe的虚拟人直播平台，客户可以上传用于动补的模型到平台上，通过网络摄像头捕捉动作，并绑定到模型上。提供了比较精确的面补以及动作捕捉。我在这个项目中负责需求分析，文档撰写以及全部的项目开发推进。该项目作为毕业设计获得院系优秀毕设三等奖。
-                        </p>
+                        <ul class="project-description">
+                            <li>独立完成项目需求分析和规划，输出完整的项目文档</li>
+                            <li>设计产品功能和交互流程，包括模型上传、动作捕捉等核心功能</li>
+                            <li>全程把控项目开发进度，确保项目质量</li>
+                            <li>该项目获得院系优秀毕设三等奖</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -92,15 +136,19 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h2 class="project-title">深圳睿建智能建筑图纸深化设计</h2>
+                        <h2 class="project-title">深圳睿建智能建筑图纸深化设计系统</h2>
+                        <p class="project-role"><strong>角色：</strong>开发工程师 & 需求分析师</p>
                         <div class="project-tags">
                             <span class="tag">C# .NET Core</span>
                             <span class="tag">RabbitMQ</span>
                             <span class="tag">WPF</span>
                         </div>
-                        <p class="project-description">
-                            这是一个建筑图纸深化设计系统，主要功能是根据建筑图纸进行深化设计，生成施工图纸。同时它提供项目管理，图纸管理，3D模型预览等功能。我在当中负责WPF前端开发以及部分设计工作。
-                        </p>
+                        <ul class="project-description">
+                            <li>与图纸设计师密切沟通，讨论项目需求</li>
+                            <li>设计并优化系统业务流程，包括项目管理、图纸管理、3D模型预览等功能模块</li>
+                            <li>使用Draw.io绘制业务流程图，通过蓝湖与UI设计师沟通协作</li>
+                            <li>作为开发工程师参与WPF前端开发，确保产品功能准确实现</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -124,15 +172,18 @@
                     </div>
                     <div class="project-content">
                         <h2 class="project-title">金博K9ERP系统</h2>
+                        <p class="project-role"><strong>角色：</strong>系统分析师 & 开发工程师</p>
                         <div class="project-tags">
                             <span class="tag">C# .NET Framework 4.0</span>
                             <span class="tag">SQLSERVER</span>
                             <span class="tag">WinForm</span>
-                            <span class="tag">FastReport</span>
                         </div>
-                        <p class="project-description">
-                            这是一个提供给医药企业使用的ERP系统，它提供了符合当前药监规范的ERP系统，包括生产，销售，采购，库存，财务，质量，物流，报表等功能。我在当中主要负责系统与第三方的接口对接内容，以及部分POS系统和内部CRM系统的开发。
-                        </p>
+                        <ul class="project-description">
+                            <li>负责与医药企业客户对接，深入理解行业需求，设计符合药监规范的ERP系统</li>
+                            <li>主导系统与第三方平台的接口设计，输出详细的接口文档和流程说明</li>
+                            <li>为公司现有的POS系统和CRM系统增加功能，提升用户体验和业务效率</li>
+                            <li>定期收集用户反馈，持续优化系统功能和流程</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -158,13 +209,17 @@
                     </div>
                     <div class="project-content">
                         <h2 class="project-title">模仿血液流动的声感跑马灯</h2>
+                        <p class="project-role"><strong>角色：</strong>硬件开发工程师</p>
                         <div class="project-tags">
                             <span class="tag">C++</span>
                             <span class="tag">Arduino UNO R3</span>
                         </div>
-                        <p class="project-description">
-                            这个是和广美同学合作的一个项目，它模仿血液流动的声感跑马灯，并且通过声音来控制灯带的流动。他负责狮子头雕塑部分，我负责硬件灯带部分。
-                        </p>
+                        <ul class="project-description">
+                            <li>负责项目硬件部分的需求分析和方案设计</li>
+                            <li>通过Arduino UNO R3 微控板实现声音感应和LED灯带控制功能</li>
+                            <li>与艺术设计师紧密配合，确保技术实现符合艺术效果要求</li>
+                            <li>项目目前处于初步交付阶段，后续灯带艺术家反馈进行优化</li>
+                        </ul>
                     </div>
                 </div>
             </div>
