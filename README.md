@@ -3,7 +3,7 @@
 个人作品集展示网站。
 
 ## 访问地址
-https://j-jchen.github.io/portfolio/
+https://chen-jjing.github.io/CHEN_PROFILE/
 
 ## 技术栈
 - HTML5
